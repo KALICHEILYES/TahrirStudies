@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>موقعي التجريبي</title>
+    <link rel="stylesheet" href="Style.css">
 </head>
 <body style="text-align:center; font-family:Arial;">
 <!-- قائمة التنقل -->
