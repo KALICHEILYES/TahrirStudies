@@ -1,0 +1,21 @@
+﻿/* تنسيق القائمة */
+nav {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+/* روابط القائمة */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+/* عند تمرير الفأرة */
+nav a:hover {
+    color: #ff9800;
+}
