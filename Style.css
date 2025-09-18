@@ -3,8 +3,89 @@ nav {
     background-color: #333;
     padding: 10px;
     text-align: center;
+    position: fixed; /* تجعلها ثابتة */
+    top: 0; /* تبقى في أعلى الصفحة */
+    left: 0;
+    width: 100%; /* عرض كامل */
+    z-index: 1000; /* تبقى فوق باقي العناصر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    /* روابط القائمة (تظهر في الكمبيوتر) */
+    nav .links {
+        display: flex;
+    }
+        nav .links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+            nav .links a:hover {
+                color: #ff9800;
+            }
+
+/* زر القائمة (الهاتف) */
+.menu-btn {
+    font-size: 26px;
+    cursor: pointer;
+    display: none; /* نخفيه في الكمبيوتر */
+}
+/* --------------------------
+   القائمة الجانبية (Sidebar)
+--------------------------- */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* مخفية خارج الشاشة */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    padding-top: 60px;
+    transition: right 0.3s ease;
+    z-index: 2000;
 }
 
+    .sidebar a {
+        display: block;
+        padding: 12px 20px;
+        color: white;
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+        .sidebar a:hover {
+            background-color: #444;
+            color: #ff9800;
+        }
+
+    /* عند فتح القائمة */
+    .sidebar.active {
+        right: 0;
+    }
+
+/* --------------------------
+   استجابة للشاشات الصغيرة
+--------------------------- */
+@media (max-width: 768px) {
+    nav .links {
+        display: none; /* نخفي الروابط */
+    }
+
+    .menu-btn {
+        display: block; /* نعرض زر ☰ */
+    }
+}
+
+/* تعويض المسافة تحت القائمة العلوية */
+body {
+    margin: 0;
+    padding-top: 60px;
+    font-family: Arial, sans-serif;
+}
 /* روابط القائمة */
 nav a {
     color: white;
@@ -14,8 +95,67 @@ nav a {
     font-size: 18px;
     transition: color 0.3s;
 }
+    /* عند تمرير الفأرة */
+    nav a:hover {
+        color: #ff9800;
+    }
 
-/* عند تمرير الفأرة */
-nav a:hover {
-    color: #ff9800;
+
+
+/* ---------------------
+   القائمة المنسدلة
+---------------------- */
+
+/* الحاوية */
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+    /* زر القائمة */
+    .dropdown > a {
+        cursor: pointer;
+    }
+
+/* القائمة الفرعية */
+.dropdown-content {
+    display: none; /* مخفية افتراضياً */
+    position: absolute;
+    background-color: #444;
+    min-width: 150px;
+    text-align: left;
+    padding: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+    /* روابط القائمة الفرعية */
+    .dropdown-content a {
+        display: block;
+        padding: 8px 12px;
+        margin: 0;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    /* عندما تكون نشطة (مفتوحة) */
+    .dropdown-content.active {
+        display: block;
+    }
+
+        /* عند تمرير الفأرة على الرابط */
+        .dropdown-content a:hover {
+            background-color: #555;
+            color: #ff9800;
+        }
+
+/* إظهار القائمة عند المرور */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* محتوى الصفحة يحتاج مسافة تحت القائمة */
+body {
+    margin: 0;
+    padding-top: 60px; /* لتفادي تغطية النص بالقائمة */
 }
