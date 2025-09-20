@@ -6,12 +6,18 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "blog"
+  - name: blog
     label: "المقالات"
     folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - { label: "العنوان", name: "title", widget: "string" }
-      - { label: "التاريخ", name: "date", widget: "datetime" }
-      - { label: "المحتوى", name: "body", widget: "markdown" }
+      - label: "العنوان"
+        name: title
+        widget: string
+      - label: "التاريخ"
+        name: date
+        widget: datetime
+      - label: "المحتوى"
+        name: body
+        widget: markdown
