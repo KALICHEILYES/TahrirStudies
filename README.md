@@ -8,9 +8,9 @@
 <body style="text-align:center; font-family:Arial;">
 <!-- قائمة التنقل -->
 <nav>
-    <a href="Page1.html">الرئيسية</a>
-    <a href="HTMLPage2.html">من نحن</a>
-    <a href="HTMLPage3.html">اتصل بنا</a>
+    <a href="index.html">الرئيسية</a>
+    <a href="index.html">قسم الأبحاث والدراسات</a>
+    <a href="index.html">قسم اللإعلام</a>
 </nav>
      <!-- محتوى الصفحة -->
   <h1 style="text-align:center;">مرحبًا بك في موقع إخلاص حلاس!</h1>

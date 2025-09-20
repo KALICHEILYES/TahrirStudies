@@ -1,8 +1,8 @@
-backend:
+﻿backend:
   name: git-gateway
-  branch: main
+  branch: main   # أو master حسب اسم فرعك
 
-media_folder: "images/uploads"
+media_folder: "images/uploads"   # مكان حفظ الصور
 public_folder: "/images/uploads"
 
 collections:
