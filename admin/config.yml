@@ -2,8 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+# لاحظ التغيير من images/uploads إلى img/uploads
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
 
 collections:
   - name: blog
