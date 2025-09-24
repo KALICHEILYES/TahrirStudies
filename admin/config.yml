@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  repo: KALICHEILYES/TahrirStudies
   branch: main
 
 # لاحظ التغيير من images/uploads إلى img/uploads
@@ -22,3 +23,4 @@ collections:
       - label: "المحتوى"
         name: body
         widget: markdown
+
