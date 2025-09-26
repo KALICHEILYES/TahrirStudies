@@ -1,26 +1,23 @@
 backend:
-  name: git-gateway
-  repo: KALICHEILYES/TahrirStudies
+  name: github
+  repo: KALICHEILYES/TahrirStudies   # ضع اسم المستودع هنا بالضبط (username/repo)
   branch: main
+  base_url: https://tahrirstudies.herokuapp.com   # السيرفر الوسيط (OAuth Server)
+  auth_endpoint: /auth
 
-# لاحظ التغيير من images/uploads إلى img/uploads
-media_folder: "img/uploads"
-public_folder: "/img/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-  - name: blog
+  - name: "blog"
     label: "المقالات"
     folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - label: "العنوان"
-        name: title
-        widget: string
-      - label: "التاريخ"
-        name: date
-        widget: datetime
-      - label: "المحتوى"
-        name: body
-        widget: markdown
+      - { label: "العنوان", name: "title", widget: "string" }
+      - { label: "التاريخ", name: "date", widget: "datetime" }
+      - { label: "المحتوى", name: "body", widget: "markdown" }
+
+
 
