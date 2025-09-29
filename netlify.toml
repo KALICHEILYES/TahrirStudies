@@ -1,7 +1,0 @@
-[build]
-  publish = "/"
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-eval' https://unpkg.com; style-src 'self' 'unsafe-inline' https://unpkg.com; connect-src *; img-src * data:; font-src * data:"
